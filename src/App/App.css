@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+html {
+  min-width: 320px;
+
+  font-weight: 400;
+  /* font-size: var(--size-n); */
+
+  /* font-family: var(--font-main); */
+  /* line-height: var(--lh-n); */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+
+  overflow-y: scroll;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* скрываем сломанные пиксели сторонних скриптов, кототрые создавали пустые места под подвалом */
+body > img {
+  display: block;
+  height: 0px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* скрываем страницу до загрузки скрипта optimize от google */
+.async-hide {
+  opacity: 0;
 }
